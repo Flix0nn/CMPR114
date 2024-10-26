@@ -1,0 +1,42 @@
+def sales():
+    num_days = int(input('Enter the number of days of sales: '))
+    sales_file = open('sales.txt', 'w')
+
+    total_sales = 0
+    for count in range(1, num_days + 1):
+        sales = float(input('Enter the sales for day #' + str(count) + ": "))
+        total_sales += sales
+        sales_file.write(f'Day {count} Sales: {sales:.2f}\n')
+
+    sales_file.close()
+
+    salary = float(input('Enter your salary: $'))
+    if total_sales > 1000:
+        commission = salary * 0.10
+        salary += commission
+        commission_added = True
+    else:
+        commission = 0
+        commission_added = False
+
+    with open('sales.txt', 'w') as sales_file:
+        sales_file.write(f'Total Sales: {total_sales:.2f}\n')
+        sales_file.write(f'Salary: {salary:.2f}\n')
+        if commission_added:
+            sales_file.write(f'Commission added: {commission:.2f}\n')
+        else:
+            sales_file.write('No commission added\n')
+
+    print('Sales and salary details recorded')
+
+def read_sales():
+    sales_file = open('sales.txt', 'r')
+    lines = sales_file.readlines()
+
+    for line in lines:
+        print(line.strip())
+
+    sales_file.close()
+
+sales()
+read_sales()

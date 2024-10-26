@@ -1,0 +1,24 @@
+def get_name():
+    fn = input("Enter last and first name: ")
+    return fn
+
+def get_scores_and_calculate():
+
+    scores = []
+
+    for _ in range(3):
+        score = float(input("Enter score: "))
+        scores.append(score)
+
+    total = sum(scores)
+    avg = total / len(scores)
+    round_avg = round(avg, 2)
+
+    return total, round_avg
+
+if __name__ == "__main__":
+    name = get_name()
+
+    total, average = get_scores_and_calculate()
+
+    print(f"{name} Total: {total} Average: {average}")

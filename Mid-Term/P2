@@ -1,0 +1,13 @@
+gross = float(input("Enter gross salary: "))
+                                #80,000.00
+percent = 0.10
+
+#     Gross, Percent
+def calc (G, P):
+    PT = G*P
+    #pre-Total
+    T = PT + G
+    #Total
+    print(f"Total: {T:,.2f}")
+
+calc(gross, percent)

@@ -1,0 +1,8 @@
+file_path = 'hwk/3/number_list.txt'
+index = 0
+number = 1
+with open(file_path, 'a') as writeFile:
+    while index < 100:
+        writeFile.write(str(number)+"\n")
+        number += 1
+        index += 1

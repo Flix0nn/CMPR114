@@ -1,0 +1,53 @@
+import tkinter as tk #import the gui interface controls
+from tkinter import messagebox #imports the message display
+
+win = tk.Tk()#create the window interface
+win.geometry("740x100")#width x height in pixels
+win.title("Customer Information")#Label for the title
+
+lb1lastname = tk.Label(win, text = "enter the lastname").grid(column = 0, row = 0)#Label widget
+lb1Firstname = tk.Label(win, text = "enter the firstname: ").grid(column = 1, row = 0)
+lb1address = tk.Label(win, text = "enter the address: ").grid(column = 2, row = 0)
+lb1city = tk.Label(win, text = "enter the city: ").grid(column = 3, row = 0)
+lb1state = tk.Label(win, text = "enter the state: ").grid(column = 4, row = 0)
+lb1zipcode = tk.Label(win, text = "enter the zipcode: ").grid(column = 5, row = 0)
+
+def write():
+    text_file = open("Customers.txt", 'a')
+    content = text_file.write("\nConfirmation: " + str(LN.get()) + ", " + str(FN.get()) + ", " + str(AD.get()) + ", " + str(CT.get())
+    + ", " + str(ST.get()) + ", " + str(ZC.get()))
+    text_file.close
+    messagebox.showinfo("information","Data Recorded")
+
+def quit():
+    messagebox.showinfo("information","Thank you...")
+    win.destroy() #closes the interface
+
+def submit(): #function name
+    messagebox.showinfo("information","entered: " + LN.get() + "," + FN.get() + "," + AD.get() + "," + CT.get() + "," + ST.get() + "," + ZC.get())#display info
+
+LN = tk.StringVar() #the StringVar manages the Entry widget
+txtLastname = tk.Entry(win, width = 12, textvariable = LN).grid(column = 0, row = 1)#Text Entry Widget
+FN = tk.StringVar()
+txtFirstname = tk.Entry(win, width = 12, textvariable = FN).grid(column = 1, row = 1)
+AD = tk.StringVar()
+txtFirstname = tk.Entry(win, width = 12, textvariable = AD).grid(column = 2, row = 1)
+CT = tk.StringVar()
+txtFirstname = tk.Entry(win, width = 12, textvariable = CT).grid(column = 3, row = 1)
+ST = tk.StringVar()
+txtFirstname = tk.Entry(win, width = 12, textvariable = ST).grid(column = 4, row = 1)
+ZC = tk.StringVar()
+txtFirstname = tk.Entry(win, width = 12, textvariable = ZC).grid(column = 5, row = 1)
+
+                                            #command calls the click function
+btnSubmit = tk.Button(win, text = 'submit', command = submit).grid(column = 0, row = 4) #Button widget
+
+                                        #command calls the quit function
+btnQuit = tk.Button(win, text = 'quit', command = quit).grid(column = 1, row = 4) #Button widget
+
+                                                       
+                                                      #call the function write
+btnWrite = tk.Button(win, text = "transfer", command = write).grid(column = 2, row = 4)#Button widget
+
+win.mainloop() #ensures the interfaces stay on the screen or window
+submit()

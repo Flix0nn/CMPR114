@@ -1,0 +1,16 @@
+Numbers: 1.0, 2.0, 3.0
+Sum: 6.0
+Average: 2.0
+
+Numbers: 3.0, 2.0, 3.0
+Sum: 8.0
+Average: 2.6666666666666665
+
+Numbers: 3.0, 2.0, 3.0
+Sum: 8.0
+Average: 2.6666666666666665
+
+Numbers: 3.0, 3.0, 3.0
+Sum: 9.0
+Average: 3.0
+

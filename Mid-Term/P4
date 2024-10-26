@@ -1,0 +1,25 @@
+sales = float(input("Enter the sales amount: "))
+
+def calc(S):
+    if S <= 100000 and S >= 90000:
+        commission = 0.30
+        Amount = commission*S
+        print(f"Commission: ${Amount:,.2f}")
+        total = S + Amount
+        print(f"Total amount (Sales + Commission): ${total:,.2f}")
+    elif S <=80000 and S >= 70000:
+        commission = 0.20
+        Amount = commission*S
+        print(f"Commission: ${Amount:,.2f}")
+        total = S + Amount
+        print(f"Total amount (Sales + Commission): ${total:,.2f}")
+    elif S <=60000 and S >= 50000:
+        commission = 0.10
+        Amount = commission*S
+        print(f"Commission: ${Amount:,.2f}")
+        total = S + Amount
+        print(f"Total amount (Sales + Commission): ${total:,.2f}")
+    else:
+        print("ERROR")
+
+calc(sales)

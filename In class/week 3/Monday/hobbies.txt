@@ -1,0 +1,10 @@
+Name: Jane 
+Your Hobbys are: ['tennis', 'sewing', 'swimming'] 
+Name: jack 
+Your Hobbys are: ['soccer'] 
+Name: Janes 
+Your Hobbys are: ['tennis', 'swimming'] 
+Name: Janes 
+Your Hobbys are: ['tennis', 'swimming'] 
+Name: Emi 
+Your Hobbys are: ['h1', 'h2', 'h3'] 

@@ -1,0 +1,35 @@
+while True:
+    index = 0
+    scores = []
+
+    while index < 4 :
+        score = float(input("Enter grade score: "))
+        scores.append(score)
+        index += 1
+  
+    total = sum(scores)
+    average = total/4
+
+    if average > 100:
+     print(f"Average score {average} is greater than 100. Please re-enter the 4 scores.")
+    else:
+        break
+
+def letter_grade(T):
+    if T <= 100 and T >= 90:
+        letter = "A"
+        print(f"Grade: {letter}")
+    elif T <= 89 and T >= 80:
+        letter = "B"
+        print(f"Grade: {letter}")
+    elif T <= 79 and T >= 70:
+        letter = "C"
+        print(f"Grade: {letter}")
+    elif T <= 69 and T >= 60:
+        letter = "D"
+        print(f"Grade: {letter}")
+    else:
+        letter = "F"
+        print(f"Grade: {letter}")
+
+letter_grade(average)

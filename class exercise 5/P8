@@ -1,0 +1,16 @@
+import random
+
+def get_number():
+    number = random.randint(1, 10)
+    write_read(number)
+
+def write_read(num):
+    openFile = open('RandomNum.txt','w')
+    openFile.write(f'{num}\n')
+
+    openFile = open('RandomNum.txt','r')
+    fileContents = openFile.read()
+    print(fileContents)
+    openFile.close()
+
+get_number()

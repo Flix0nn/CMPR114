@@ -1,0 +1,6 @@
+animal = "Girrafe"
+fruit = "Apple"
+country = "Japan"
+file_path = 'hwk/3/things.txt'
+with open(file_path, 'a') as writeFile:
+    writeFile.write(f"{animal}\n{fruit}\n{country}\n")

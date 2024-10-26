@@ -1,0 +1,94 @@
+#this program writes to a file
+#def write():
+    #openFile = open('myFile.txt','w')#writing to the default directory
+    #openFile1 = open ('myFile1.txt','w')
+    #writing to a specific directory
+
+    #openFile.write('Jason\n')
+    #openFile.write('Jill\n')
+    #openFile.write('Jake\n')
+    
+    #openFile1.write('Jason\n')
+    #openFile1.write('Jill\n')
+    #openFile1.write('Jake\n')
+
+    #openFile.close()
+    #openFile1.close()
+
+    #print('the names have been recorded')
+
+#write()
+
+#this program reads from a file
+#def read():
+    #inFile = open('myFile.txt','r')
+    #inFile1 = open ('myFile1.txt','r')
+
+    #fileContents = inFile.read()
+    #fileContents1 = inFile1.read()
+
+    #inFile.close()
+    #inFile1.close()
+
+    #print(fileContents)
+    #print(fileContents1)
+
+#read()
+
+#def WriteInput():#this function will allow the user to write the input
+
+    #print('enter the name of your friends')
+#writeMoreFriends = 'Y'
+
+#while writeMoreFriends=='Y' or writeMoreFriends=='y':
+
+    #name1 = input('Friend #1 ')
+    #name2 = input('Friend #2 ')
+    #name3 = input('Friend #3 ')
+
+    #FriendFile = open('friends.txt', 'a')# the a letter means to append
+
+    #FriendFile.write (name1 + '\n')
+    #FriendFile.write (name2 + '\n')
+    #FriendFile.write (name3 + '\n')
+
+    #FriendFile.close()
+
+    #print('friends recorded')
+
+    #writeMoreFriends = input('do you want to write more friends? type Y or y')
+
+#WriteInput()
+
+#ask to enter the first and last name with age
+#write them to a file and read from the file
+
+def write():
+    openFile = open('contestants.txt','w')
+
+    contestant1 = input('\nenter contestant #1 name: ')
+    contestant1age = int(input("enter contestant #1's age: "))
+
+    contestant2 = input('enter contestant #2 name: ')
+    contestant2age = int(input("enter contestant #2's age: "))
+
+    contestant3 = input('enter contestant #3 name: ')
+    contestant3age = int(input("enter contestant #3's age: "))
+
+    openFile.write(f'\n{contestant1}, {contestant1age}\n')
+    openFile.write(f'{contestant2}, {contestant2age}\n')
+    openFile.write(f'{contestant3}, {contestant3age}\n')
+
+    openFile.close()
+    read()
+
+def read():
+    inFile = open('contestants.txt','r')
+
+
+    fileContents = inFile.read()
+
+    inFile.close()
+
+    print(fileContents)
+write()

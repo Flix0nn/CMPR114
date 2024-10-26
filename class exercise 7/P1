@@ -1,0 +1,44 @@
+class Patient:
+    def __init__(self, firstname, middlename, lastname, address, city, state, zipcode, phoneNumber, emergencyContact):
+        self.firstname = firstname
+        self.middlename = middlename
+        self.lastname = lastname
+        self.address = address
+        self.city = city
+        self.state = state
+        self.zipcode = zipcode
+        self.phoneNumber = phoneNumber
+        self.emergencyContact = emergencyContact
+    
+    def get_patient_info(self):
+        return [self.firstname, self.middlename, self.lastname, self.address, self.city, self.state, self.zipcode, self.phoneNumber, self.emergencyContact]
+
+class Procedure:
+    def __init__(self, procedure, date, practitioner, charges):
+        self.procedure = procedure
+        self.date = date
+        self.practitioner = practitioner
+        self.charges = charges
+        self.patients = []
+
+    def addPatientData(self, patient):
+        self.patients.append(patient)
+    
+    def get_patient_list(self):
+        return [[patient.name, patient.age, patient.condition] for patient in self.patients]
+
+patient = Patient("John", "Andrew", "Doe", "111 Main St.", "Santa Ana", "California", "12345", "714-123-4567", ["Jane Doe", "714-321-7654"])
+procedure1 = Procedure("Physical Exam", "7/8/2024", "Dr. Mann", 250.00)
+procedure2 = Procedure("X-ray", "7/8/2024", "Dr. Poobie", 500.00)
+procedure3 = Procedure("Blood test", "7/8/2024", "Dr. Sin", 200.00)
+
+print("Patient Information:")
+print(f"Name: {patient.get_patient_info()[0]} {patient.get_patient_info()[1]} {patient.get_patient_info()[2]}")
+print(f"Address: {patient.get_patient_info()[3]} {patient.get_patient_info()[4]}, {patient.get_patient_info()[5]}")
+print(f"Phone Number: {patient.get_patient_info()[7]}")
+print(f"Emergency Contact: {patient.get_patient_info()[8][0]} {patient.get_patient_info()[8][1]}")
+
+print("\nProcedures:")
+print(f"Procedure 1: {procedure1.procedure}, Date: {procedure1.date}, Practitioner: {procedure1.practitioner}, Charges: ${procedure1.charges}")
+print(f"Procedure 2: {procedure2.procedure}, Date: {procedure2.date}, Practitioner: {procedure2.practitioner}, Charges: ${procedure2.charges}")
+print(f"Procedure 3: {procedure3.procedure}, Date: {procedure3.date}, Practitioner: {procedure3.practitioner}, Charges: ${procedure3.charges}")

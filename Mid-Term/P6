@@ -1,0 +1,10 @@
+gramsF = float(input("Enter daily grams of fat: "))
+gramsC = float(input("Enter daily grams of carbs: "))
+
+def cal(F, C):
+    calfat = F*9
+    calcarbs = C*4
+    sum = calcarbs + calfat
+    print(f"Total calories: {sum}")
+
+cal(gramsF, gramsC)

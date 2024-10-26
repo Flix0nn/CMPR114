@@ -1,0 +1,4 @@
+file_path = 'hwk/3/things.txt'
+with open(file_path, 'r') as writeFile:
+    things = writeFile.read()
+    print(things)

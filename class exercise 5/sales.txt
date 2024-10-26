@@ -1,0 +1,3 @@
+Total Sales: 5000.00
+Salary: 88000.00
+Commission added: 8000.00

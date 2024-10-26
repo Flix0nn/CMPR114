@@ -1,0 +1,31 @@
+def main():
+    num_emps = int(input('enter the number of the employee records '))
+    emp_file = open ('employee.txt','w')
+
+    for count in range (1, num_emps +1):
+        print('enter data for employee #', count)
+        
+        name = input('Name: ')
+        id_num = input("ID NUMBER: ")
+        dept = input('DEPARTMENT: ')
+
+        emp_file.write(name +'\n')
+        emp_file.write(id_num +'\n')
+        emp_file.write(dept +'\n')
+
+        print()
+
+        print('recorded')
+
+    emp_file.close()
+
+main()
+
+def read():
+    inFile = open('contestants.txt','r')
+
+    fileContents = inFile.read()
+
+    inFile.close()
+
+    print(fileContents)

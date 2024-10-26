@@ -1,0 +1,37 @@
+import sqlite3
+import os
+
+os.remove("/Users/tobisho/cmpr114/class exercise 11/CE11.db")
+con = sqlite3.connect("/Users/tobisho/cmpr114/class exercise 11/CE11.db")
+cur = con.cursor()
+
+cur.execute('''CREATE TABLE Inventory
+(ItemID INTEGER PRIMARY KEY NOT NULL,
+ItemName text,
+Price REAL)''')
+
+con.commit()
+
+cur.execute('''INSERT INTO Inventory
+(ItemName, Price)
+Values
+("Screwdriver", 4.99)''')
+
+cur.execute('''INSERT INTO Inventory
+(ItemName, Price)
+Values
+("Hammer", 12.99)''')
+
+cur.execute('''INSERT INTO Inventory
+(ItemName, Price, Item1)
+Values
+("Bolts", 11.99, "C")''')
+
+cur.execute('''Select * from Inventory''')
+
+results = cur.fetchall()
+
+for row in results:
+    print(f'{row[0]:0} {row[1]:1} {row[2]:1}')
+
+con.close()

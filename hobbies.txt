@@ -1,0 +1,12 @@
+Name: Jason 
+Age: 42 
+Your Hobbys are: Tennis 
+Name: Jane 
+Age: 21 
+Your Hobbys are: Hacking 
+Name: JJ 
+Age: 21 
+Your Hobbys are: tennis 
+Name: 1Jason 
+Age: 21 
+Your Hobbys are: ABC 

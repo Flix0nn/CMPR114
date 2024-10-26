@@ -1,0 +1,42 @@
+import tkinter as tk
+from tkinter import messagebox #imports the message display
+
+win = tk.Tk()#create the window interface
+win.geometry("420x100")#width x height in pixels
+win.title("Numbers")#Label for the title
+
+def write():
+    try:
+        num1 = float(N1.get())
+        num2 = float(N2.get())
+        num3 = float(N3.get())
+
+        sum = num1 + num2 + num3
+        avg = sum / 3
+
+        with open("Sum.txt", 'a') as text_file:
+            text_file.write(f"Numbers: {num1}, {num2}, {num3}\n")
+            text_file.write(f"Sum: {sum}\n")
+            text_file.write(f"Average: {avg}\n\n")
+            text_file.close
+        
+        messagebox.showinfo("information", "Data Recorded")
+    
+    except ValueError:
+        messagebox.showerror("Error", "Please enter valid numbers")
+
+tk.Label(win, text = "enter the 1st number:").grid(column = 0, row = 0)
+tk.Label(win, text = "enter the 2nd number:").grid(column = 1, row = 0)
+tk.Label(win, text = "enter the 3rd number:").grid(column = 2, row = 0)
+
+N1 = tk.StringVar() #the StringVar manages the Entry widget
+N2 = tk.StringVar()
+N3 = tk.StringVar()
+
+tk.Entry(win, width = 12, textvariable = N1).grid(column = 0, row = 1)#Text Entry Widget
+tk.Entry(win, width = 12, textvariable = N2).grid(column = 1, row = 1)
+tk.Entry(win, width = 12, textvariable = N3).grid(column = 2, row = 1)
+
+tk.Button(win, text = 'submit', command = write).grid(column = 1, row = 2) #Button widget
+
+win.mainloop()

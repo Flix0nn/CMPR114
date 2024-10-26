@@ -1,0 +1,12 @@
+index = 0
+scores = []
+while index < 4:
+    score = float(input("Enter scores: "))
+    scores.append(score)
+    index += 1
+
+total = sum(scores)
+avg = total/len(scores)
+
+print(total)
+print(avg)

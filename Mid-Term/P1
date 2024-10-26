@@ -1,0 +1,21 @@
+
+def price(quant):
+    if quant >= 50:
+        price = 3
+        calc(price, quant)
+    elif quant > 10 and quant < 50:
+        price = 4
+        calc(price, quant)
+    elif quant <= 10:
+        price = 5
+        calc(price, quant)
+    else:
+        print("ERROR, COULD NOT CALCULATE PRICE")
+
+def calc(P, Q):
+    T = P * Q
+    print(f"Price per item is: {P:,.2f}\n" + f"Quantity was: {Q:,.2f}\n" + f"Total: {T:,.2f}")
+
+quantity = int(input('enter quantity: ' ))
+
+price(quantity)

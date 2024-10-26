@@ -1,0 +1,23 @@
+def write():
+    file = open('Mid-Term/Coffee-1.txt','a')
+
+    coffee_brand = input('Enter coffee brand: ')
+    prod_num = input('Enter the product #: ')
+    price = input('Enter price: ')
+    
+    file.write(f"\n{coffee_brand}, {prod_num}, {price}")
+    file.close()
+
+    print('\ndata recorded\n')
+    read()
+
+def read():
+    try:
+        with open('Mid-Term/Coffee-1.txt', 'r') as inFile:
+            for line in inFile.readlines():
+                print(line.strip())
+    except FileNotFoundError:
+        print("Error: The file 'Coffee-1.txt' was not found.")
+
+write()
+read()

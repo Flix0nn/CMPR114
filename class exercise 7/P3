@@ -1,0 +1,16 @@
+class Employee:
+    def __init__(self,name,id,dept,job):
+        self.name = name
+        self.id = id
+        self.dept = dept
+        self.job = job
+
+employee = Employee("Susan Meyers", "47899", "Accounting", "Vice President")
+employee2 = Employee("Mark Jones", "39119", "IT", "Programmer")
+employee3 = Employee("Joy Rogers", "81774", "Manufacturing", "Engineer")
+
+print("N5ame      \t  ID number   \tDepartment  \tJob Title")
+
+print(employee.name + "\t  " + employee.id + "\t\t" + employee.dept + "\t" + employee.job)
+print(employee2.name + "\t  " + employee2.id + "\t\t" + employee2.dept + "\t        " + employee2.job)
+print(employee3.name + "\t  " + employee3.id + "\t\t" + employee3.dept + "\t" + employee3.job)

@@ -1,0 +1,24 @@
+def main():
+
+    while True:
+
+        try:#try the batch of code below, if there are no errors than disregard the except
+
+            hours = int(input('hours worked '))
+
+            pay = int(input('hourly pay '))
+
+            gross = hours * pay
+
+            print('gross pay $' , format(gross, ',.2f'))
+            print('recorded')
+            
+            break
+
+        except ValueError:#if there are errors on the try statement, run the below print
+            print('ERROR: hours worked and pay must be valid numbers, try again')
+        
+        except Exception as err:#built-in Exception error processing
+            print(err)
+        
+main()
